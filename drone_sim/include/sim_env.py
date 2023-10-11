@@ -238,7 +238,7 @@ class SimEnv:
         self.sim_results.append(dict())
 
         # Initialize Results
-        x = self.x0
+        x = self.x0.to("cuda")
         time = 0 
         self.sim_results[self.sim_iteration]["time"] = [time]
         self.sim_results[self.sim_iteration]["state trajectory"] = [x]
