@@ -242,6 +242,7 @@ class SimEnv:
         time = 0 
         self.sim_results[self.sim_iteration]["time"] = [time]
         self.sim_results[self.sim_iteration]["state trajectory"] = [x]
+        print(x)
         u, slack = self.k(x)
         self.sim_results[self.sim_iteration]["input trajectory"] = [u]
         self.sim_results[self.sim_iteration]["slack trajectory"] = [slack]
